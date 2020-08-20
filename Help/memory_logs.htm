@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Memory-Based Logs</Title>
+<style>
+<!--
+	body {
+		font-family: Verdana, sans-serif;
+		font-size: x-small;
+	}
+	p.title {
+		font-family: Verdana, sans-serif;
+		font-size: large;
+		color: magenta;
+	}
+-->
+</style>
+</HEAD>
+<BODY>
+<p class="title">Memory-Based Logs</p>
+
+<p>Memory-based logs are a way to log as you go, without having to continually remember to save your log, as with <a href="snapshot_log.htm">Snapshot logs</a>.</p>
+<p>Among the other benefits of this logging mechanism, it allows you to save in HTML and XML.</p>
+<p>To activate memory-based logging, simply select <strong>Tools -&gt; Logging</strong>. A checkmark will appear by the menu item to indicate that it's active, and Magenta will notify you with a message that logging has started. Select the menu item again to disable memory-based logging.</p>
+<p>Once it is activated, a separate background thread will automatically save your log to disk while you chat. The filename will either be <em>magenta0.txt</em>, <em>magenta0.xml</em>, or <em>magenta0.htm</em>, depending on what format you've chosen in <strong>Tools -&gt; Options -&gt; Auto Logging</strong>. The file will be saved in the same directory as the Magenta executable, and will be overwritten each time you start Magenta.</p>
+
+<p>You can also dump a memory-based log out every hour since Magenta started, by selecting <strong>Save a log at the top of every hour.</strong> Magenta will announce when the log file has been saved.</p>
+
+<p>The hourly log file can be annotated with a short comment of your choosing; just go to <strong>Tools -> Set Log Annotation</strong>, and enter it.</p>
+
+<p>You can also save this log file to any filename or type of your choosing, by going to <strong>Chat -&gt; Save Log</strong>. If the memory log is empty, however, you won't be able to save anything. To clear out the contents of the log, simply select <strong>Tools -&gt; Clear Log</strong>.</p>
+<p><em>A few notes:</em> For those anal out there and wondering about the quality of Magenta's HTML generator, Magenta <em>does</em> produce well-formed HTML. If you're too lazy to check its DOCTYPE, it adheres to the HTML 4.0 Strict specification. &lt;SPAN&gt; tags are used for local formatting.</p>
+</BODY>
+</HTML>

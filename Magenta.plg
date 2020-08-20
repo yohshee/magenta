@@ -1,0 +1,86 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Magenta - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Rick\LOCALS~1\Temp\RSPF8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Obj\Debug/" /Fp"Obj\Debug/Magenta.pch" /Yu"stdafx.h" /Fo"Obj\Debug/" /Fd"Obj\Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Rick\Desktop\Magenta\magenta-src-cpp\ChatWindow.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Rick\LOCALS~1\Temp\RSPF8.tmp" 
+Creating temporary file "C:\DOCUME~1\Rick\LOCALS~1\Temp\RSPF9.tmp" with contents
+[
+version.lib htmlhelp.lib /nologo /subsystem:windows /profile /debug /machine:I386 /out:"Debug/Magenta.exe" 
+".\Obj\Debug\Annotation.obj"
+".\Obj\Debug\AutoLog.obj"
+".\Obj\Debug\BlockList.obj"
+".\Obj\Debug\ChatConsole.obj"
+".\Obj\Debug\ChatSocket.obj"
+".\Obj\Debug\ChatWindow.obj"
+".\Obj\Debug\dlgbars.obj"
+".\Obj\Debug\Ignored.obj"
+".\Obj\Debug\InputBox.obj"
+".\Obj\Debug\Log.obj"
+".\Obj\Debug\Magenta.obj"
+".\Obj\Debug\mdlsmain.obj"
+".\Obj\Debug\modeless.obj"
+".\Obj\Debug\NameSlide.obj"
+".\Obj\Debug\NewEditBox.obj"
+".\Obj\Debug\NewListBox.obj"
+".\Obj\Debug\Options.obj"
+".\Obj\Debug\Person.obj"
+".\Obj\Debug\PrivateChat.obj"
+".\Obj\Debug\Search.obj"
+".\Obj\Debug\StatusWindow.obj"
+".\Obj\Debug\StdAfx.obj"
+".\Obj\Debug\Tokenizer.obj"
+".\Obj\Debug\UrlGrabber.obj"
+".\Obj\Debug\Magenta.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Rick\LOCALS~1\Temp\RSPF9.tmp"
+<h3>Output Window</h3>
+Compiling...
+ChatWindow.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\Rick\LOCALS~1\Temp\RSPFB.tmp" with contents
+[
+/nologo /o"Obj/Debug/Magenta.bsc" 
+".\Obj\Debug\StdAfx.sbr"
+".\Obj\Debug\Annotation.sbr"
+".\Obj\Debug\AutoLog.sbr"
+".\Obj\Debug\BlockList.sbr"
+".\Obj\Debug\ChatConsole.sbr"
+".\Obj\Debug\ChatSocket.sbr"
+".\Obj\Debug\ChatWindow.sbr"
+".\Obj\Debug\dlgbars.sbr"
+".\Obj\Debug\Ignored.sbr"
+".\Obj\Debug\InputBox.sbr"
+".\Obj\Debug\Log.sbr"
+".\Obj\Debug\Magenta.sbr"
+".\Obj\Debug\mdlsmain.sbr"
+".\Obj\Debug\modeless.sbr"
+".\Obj\Debug\NameSlide.sbr"
+".\Obj\Debug\NewEditBox.sbr"
+".\Obj\Debug\NewListBox.sbr"
+".\Obj\Debug\Options.sbr"
+".\Obj\Debug\Person.sbr"
+".\Obj\Debug\PrivateChat.sbr"
+".\Obj\Debug\Search.sbr"
+".\Obj\Debug\StatusWindow.sbr"
+".\Obj\Debug\Tokenizer.sbr"
+".\Obj\Debug\UrlGrabber.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\Rick\LOCALS~1\Temp\RSPFB.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Magenta.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

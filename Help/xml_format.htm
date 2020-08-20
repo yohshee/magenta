@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Magenta XML Format</Title>
+<style>
+<!--
+	body {
+		font-family: Verdana, sans-serif;
+		font-size: x-small;
+	}
+	p.title {
+		font-family: Verdana, sans-serif;
+		font-size: large;
+		color: magenta;
+	}
+	code {
+		font-family: Courier New, Courier;
+		font-size: small;
+	}
+-->
+</style>
+</HEAD>
+<BODY>
+<p class="title">Magenta XML Format</p>
+<p>The Magenta XML format is relatively simple. There is no DTD produced when you save an XML file in Magenta; it relies only on the document being well-formed for parsing.</p>
+<p>Also remember that XML is case-sensitive.</p>
+<p>Every document is enclosed in a pair of <code>&lt;magentalog&gt;</code> tags. Within this pair, we have a single <code>&lt;stamp&gt;</code> pair, which defines text to be used as a timestamp for the log itself, as well as the timestamp in the <code>time</code> parameter.</p>
+<p>The rest of the document consists of <code>&lt;entry&gt;</code> pairs. <code>&lt;entry&gt;</code> tags must have the <code>time</code> parameter, which gives the timestamp of that log entry. An <code>&lt;entry&gt;</code> has the following tags within it:</p>
+<ul>
+<li><code>&lt;user&gt;</code> - Identifies the user who sent the message. Has the following parameters:</li>
+<ul>
+<li><code>ip</code> - Mangled IP address of the user.</li>
+<li><code>type</code> - Type of the user. This can be <em>chatserver, user, magenta, cyan, guest, private,</em> or <em>unknown</em>. Aside from the obvious ones, <em>private</em> identifies a private message sent by you. The <code>ip</code> parameter and tag text will contain the user you sent the message to, and the message type will always be set to <em>broadcast</em>. <em>Unknown</em> generally indicates an error of some kind.</li>
+</ul>
+<li><code>&lt;message&gt;</code> - Gives the message that the previous user sent. Has the following parameter:</li>
+<ul>
+<li><code>type</code> - Type of the message sent. This can be <em>broadcast</em> (sent to the room), <em>broadcast-enter</em> (an enter message), <em>broadcast-leave</em> (a leaving message), <em>private</em> (a private message received by you), or <em>unknown</em> (generally indicates an error, or an heretofore unimplemented message type).</li>
+</ul>
+</ul>
+</BODY>
+</HTML>

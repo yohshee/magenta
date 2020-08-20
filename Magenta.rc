@@ -1,0 +1,711 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Magenta.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Magenta"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,5,10,20,20
+    LTEXT           "Magenta Version 0.7.10",IDC_STATIC_VERSION,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999-2005 Rick Coogle",IDC_STATIC,39,21,
+                    119,8
+    DEFPUSHBUTTON   "OK",IDOK,177,12,50,14,WS_GROUP
+    GROUPBOX        "",IDC_FRAME_ABOUT,3,33,228,87
+    CONTROL         "",IDC_EDIT_INFO,"RICHEDIT",ES_MULTILINE | ES_READONLY | 
+                    WS_TABSTOP,5,40,220,75
+END
+
+IDD_MAGENTA_DIALOG DIALOGEX 0, 0, 382, 246
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Magenta - Cyan Chat"
+MENU IDR_MENU_MAGENTA
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC_FRAME,0,0,285,45
+    PUSHBUTTON      "S&tart Chat",IDC_CHAT,5,26,50,15,NOT WS_TABSTOP
+    PUSHBUTTON      "&Ignore",IDC_IGNORE,60,25,50,15,NOT WS_TABSTOP
+    PUSHBUTTON      "&Private Chat",IDC_PRIVATE_CHAT,115,25,50,15,NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Send Private",IDC_SEND_PRIVATE,170,25,50,15,NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "S&end",IDC_SEND,225,25,50,15,NOT WS_TABSTOP
+    LTEXT           "Your Name:",IDC_STATIC_NAME,5,10,50,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_NAME,60,10,105,12,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    LTEXT           "",IDC_STATIC_ERROR,168,12,105,10
+    CONTROL         "",IDC_PANEL,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_BORDER | WS_VSCROLL,0,62,285,182
+    LTEXT           "Who is online:",IDC_STATIC_WHO,294,0,85,10,NOT WS_GROUP
+    LISTBOX         IDC_LIST_REGULARS,291,12,87,108,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL
+    LTEXT           "Cyan Guests / Employees:",IDC_STATIC_CYAN,291,123,85,10,
+                    NOT WS_GROUP
+    LISTBOX         IDC_LIST_CYAN,291,135,87,108,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL
+    CONTROL         "",IDC_SCRATCH,"RICHEDIT",ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_BORDER,5,225,275,15
+    EDITTEXT        IDC_MESSAGE,0,48,285,12,ES_AUTOHSCROLL | NOT WS_TABSTOP
+END
+
+IDD_INPUTBOX DIALOG DISCARDABLE  0, 0, 247, 58
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter Raw Command"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,193,4,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,23,50,14
+    LTEXT           "Enter the server command below.\nWARNING: This command will NOT be checked for correctness in any way: if you are banned, it is not our fault.",
+                    IDC_STATIC_RAW_COMMAND,5,5,170,35
+    EDITTEXT        IDC_EDIT_COMMAND,1,44,244,12,ES_AUTOHSCROLL
+END
+
+IDD_PRIVATE_CHAT DIALOG DISCARDABLE  0, 0, 224, 159
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Private Chat"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RTF_PRIVATE_PANEL,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,1,0,222,125
+    EDITTEXT        IDC_EDIT_PRIVATE_MSG,1,126,221,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Send",IDC_PRIVATE_SEND,9,141,66,15
+    PUSHBUTTON      "&Close",IDC_PRIVATE_CLOSE,78,141,66,15
+    PUSHBUTTON      "&Save...",IDC_PRIVATE_SAVE,147,141,66,15
+END
+
+IDD_CHAT_CONSOLE DIALOG DISCARDABLE  0, 0, 270, 98
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Magenta - Chat Console"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Save...",IDC_CONSOLE_SAVE,95,81,78,15
+    PUSHBUTTON      "&Close",IDC_CONSOLE_CLOSE,14,81,78,15
+    PUSHBUTTON      "C&lear",IDC_CONSOLE_CLEAR,176,81,78,15
+    CONTROL         "",IDC_RTF_CONSOLE,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,0,0,269,78
+END
+
+IDD_SHOW_IGNORED DIALOGEX 0, 0, 151, 143
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ignored Chatters"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Close",IDCANCEL,18,126,50,14
+    PUSHBUTTON      "&Unignore",IDC_UNIGNORE,84,126,50,15
+    CONTROL         "List1",IDC_LVW_IGNORED,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SORTASCENDING | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,0,0,151,123,WS_EX_CLIENTEDGE
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 402, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Magenta Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,120,120,57,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,120,57,14
+    GROUPBOX        "Host Information",IDC_FRAME_HOST,0,55,189,60
+    LTEXT           "Hostname:",IDC_STATIC_HOSTNAME,5,70,45,9,SS_CENTERIMAGE
+    LTEXT           "Port:",IDC_STATIC_PORT,5,90,42,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_HOSTNAME,50,70,132,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT,50,90,132,12,ES_AUTOHSCROLL
+    CONTROL         "Mutual Ignore",IDC_CHECK_MUTUAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,199,9,78,8
+    CONTROL         "Send the ignore command when ignoring",
+                    IDC_CHECK_SEND_IGNORE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,199,62,144,8
+    CONTROL         "Display a message when someone else ignores you",
+                    IDC_CHECK_DISPLAY_IGNORE,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,199,19,185,10
+    CONTROL         "Notify about events when minimized",IDC_CHECK_NOTIFY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,74,138,8
+    CONTROL         "Show Chat Console at startup",IDC_CHECK_CONSOLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,199,29,183,8
+    GROUPBOX        "Startup",IDC_FRAME_LOGIN,0,0,189,48
+    CONTROL         "Log into chat at startup",IDC_CHECK_LOGIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,32,175,10
+    LTEXT           "Default Name:",IDC_STATIC_USERNAME,5,16,75,9
+    EDITTEXT        IDC_EDIT_USERNAME,85,15,97,12,ES_AUTOHSCROLL
+    GROUPBOX        "Other Options",IDC_STATIC_OTHER_OPTS,195,0,200,115
+    CONTROL         "Connect to Cyan Chat at startup",IDC_CHECK_CONNECT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,83,141,9
+    CONTROL         "Block the Chat Server",IDC_CHECK_CHATSERVER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,199,38,186,9
+    PUSHBUTTON      "&Name Color...",IDC_COLOR,0,120,57,14
+    PUSHBUTTON      "&Auto Logging...",IDC_AUTO_LOG,60,120,57,14
+    CONTROL         "Open URLs in a new window",IDC_CHECK_BROWSE_NEW_WINDOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,49,185,10
+    CONTROL         "Hide notification icon",IDC_CHECK_HIDE_TRAY_ICON,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,200,95,150,8
+END
+
+IDD_STATUS_WINDOW DIALOGEX 0, 0, 186, 129
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Magenta - Cyan Chat Status"
+MENU IDR_MENU_STATUS
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_LIST_STATUS,"SysListView32",LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,0,0,186,129,WS_EX_CLIENTEDGE
+END
+
+IDD_BLOCK_LIST DIALOG DISCARDABLE  0, 0, 208, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Block List"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Save and Close",IDOK,147,57,57,14
+    PUSHBUTTON      "&Discard Changes",IDCANCEL,147,39,57,14
+    DEFPUSHBUTTON   "&Add Name",IDC_BLOCK_ADD,147,3,57,14
+    EDITTEXT        IDC_EDIT_BLOCK_NAME,51,3,90,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Remove Name",IDC_BLOCK_REMOVE,147,21,57,14
+    LTEXT           "Name to add:",IDC_STATIC_BLOCK_NAME,3,3,45,12,
+                    SS_CENTERIMAGE
+    LISTBOX         IDC_LIST_BLOCK,3,33,138,72,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Current block list:",IDC_STATIC_BLOCK_LIST,3,21,75,9
+END
+
+IDD_AUTO_LOG_TYPE DIALOG DISCARDABLE  0, 0, 132, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Auto-Log Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,13,95,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,95,50,14
+    GROUPBOX        "Auto-Log File Formats",IDC_STATIC_OPTS,0,3,130,63
+    CONTROL         "&Text",IDC_RADIO_TEXT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,31,16,69,12
+    CONTROL         "&HTML",IDC_RADIO_HTML,"Button",BS_AUTORADIOBUTTON,31,32,
+                    69,12
+    CONTROL         "&XML",IDC_RADIO_XML,"Button",BS_AUTORADIOBUTTON,31,48,
+                    69,12
+    CONTROL         "&Save a log at the top of every hour",IDC_CHECK_HOUR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,70,125,15
+END
+
+IDD_URL_GRABBER DIALOG DISCARDABLE  0, 0, 186, 177
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "URL Grabber"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Go to &Link",IDOK,5,155,50,14
+    PUSHBUTTON      "&Close",IDCANCEL,60,155,50,14
+    LTEXT           "&URLs grabbed:",IDC_STATIC_URLS,5,5,90,8
+    LISTBOX         IDC_LIST_URLS,0,15,185,135,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SEARCH DIALOG DISCARDABLE  0, 0, 217, 171
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Search Snapshot"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Search",IDOK,5,155,50,14
+    PUSHBUTTON      "&Close",IDCANCEL,60,155,50,14
+    EDITTEXT        IDC_EDIT_SEARCH_TEXT,55,136,160,12,ES_AUTOHSCROLL
+    LTEXT           "Search Text:",IDC_STATIC_SEARCH_TEXT,1,138,50,8
+    CONTROL         "",IDC_EDIT_SEARCH_SNAP,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,0,0,215,130
+END
+
+IDD_NAME_SLIDE DIALOG DISCARDABLE  0, 0, 177, 51
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,3,30,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,58,30,50,14
+    LTEXT           "Name:",IDC_STATIC_NAME,4,10,25,11
+    EDITTEXT        IDC_EDIT_NAME_SLIDE,40,10,130,12,ES_AUTOHSCROLL
+END
+
+IDD_BUG_REPORT DIALOG DISCARDABLE  0, 0, 222, 276
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Magenta Bug Report"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Send",IDOK,0,260,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,55,260,50,14
+    LTEXT           "Enter the bug report below. Include the exact conditions under which you caused it to happen, what it does, etc. Click OK to send. System information is automatically collected by Magenta; check below to review what information is going to be sent.",
+                    IDC_STATIC_DESCRIPTION,0,0,215,50
+    EDITTEXT        IDC_EDIT_BUG,0,50,220,155,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_VSCROLL
+    LISTBOX         IDC_LIST_CONFIG,0,210,220,45,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ANNOTATION DIALOG DISCARDABLE  0, 0, 186, 62
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Log Annotation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,5,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,60,45,50,14
+    LTEXT           "Current Annotation:",IDC_STATIC_CURRENT_ANN,5,7,70,8
+    EDITTEXT        IDC_EDIT_OLD_ANN,75,6,105,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    LTEXT           "New Annotation:",IDC_STATIC_NEW_ANN,5,27,65,8
+    EDITTEXT        IDC_EDIT_NEW_ANN,75,25,110,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_MAGENTA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 375
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+        HORZGUIDE, 120
+        HORZGUIDE, 130
+    END
+
+    IDD_INPUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_PRIVATE_CHAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        VERTGUIDE, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+        HORZGUIDE, 69
+        HORZGUIDE, 125
+    END
+
+    IDD_CHAT_CONSOLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_SHOW_IGNORED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 395
+        VERTGUIDE, 7
+        VERTGUIDE, 144
+        VERTGUIDE, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+        HORZGUIDE, 108
+        HORZGUIDE, 117
+        HORZGUIDE, 134
+    END
+
+    IDD_STATUS_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_BLOCK_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_AUTO_LOG_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_URL_GRABBER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_SEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_NAME_SLIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 44
+    END
+
+    IDD_BUG_REPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+
+    IDD_ANNOTATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAGENTA MENU DISCARDABLE 
+BEGIN
+    POPUP "&Chat"
+    BEGIN
+        MENUITEM "&Connect\tCtrl+Shift+C",      ID_CHAT_CONNECT
+        MENUITEM "&Disconnect\tCtrl+Shift+D",   ID_CHAT_DISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "Switch &Name...\tCtrl+W",     ID_CHAT_SWITCH_NAME
+        MENUITEM "Show &Ignored...\tCtrl+I",    ID_CHAT_SHOW_IGNORED
+        MENUITEM "&Block List...\tCtrl+B",      ID_BLOCK_LIST
+        MENUITEM "Save &Log...\tCtrl+S",        ID_SAVE_FULL_LOG
+        MENUITEM "Save &Snapshot Log...\tCtrl+Shift+S", ID_CHAT_SAVE_LOG
+        MENUITEM "&Clear Chat Window\tAlt+Shift+L", 
+                                                ID_CHAT_CLEAR_CHAT_WINDOW
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_CHAT_EXIT
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Logging\tCtrl+L",            ID_LOGGING
+        MENUITEM "Cl&ear Log\tCtrl+Shift+E",    ID_CLEAR_LOG
+        MENUITEM "Set Log A&nnotation...",      ID_TOOLS_ANNOTATE
+        MENUITEM SEPARATOR
+        MENUITEM "&Options...\tCtrl+P",         ID_TOOLS_OPTIONS
+        MENUITEM "&Font...\tCtrl+F",            ID_TOOLS_FONT
+        MENUITEM "Always On &Top",              ID_TOOLS_ON_TOP
+        MENUITEM SEPARATOR
+        MENUITEM "&Status Window...",           ID_TOOLS_STATUS_WINDOW
+        MENUITEM "&URL Grabber...",             ID_URL_GRABBER
+        MENUITEM "Se&arch Snapshot...",         ID_TOOLS_SEARCH
+        MENUITEM "&Console...",                 ID_TOOLS_CONSOLE
+        MENUITEM "Send &Raw Command...\tCtrl+R", ID_TOOLS_SEND_RAW_COMMAND
+        POPUP "O&pacity"
+        BEGIN
+            MENUITEM "100%",                        ID_OPACITY_100
+            MENUITEM "90%",                         ID_OPACITY_90
+            MENUITEM "80%",                         ID_OPACITY_80
+            MENUITEM "70%",                         ID_OPACITY_70
+            MENUITEM "60%",                         ID_OPACITY_60
+            MENUITEM "50%",                         ID_OPACITY_50
+            MENUITEM "40%",                         ID_OPACITY_40
+            MENUITEM "30%",                         ID_OPACITY_30
+            MENUITEM "20%",                         ID_OPACITY_20
+            MENUITEM "10%",                         ID_OPACITY_10
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "H&elp Topics...\tF1",         ID_HELP_TOPICS
+        MENUITEM "Magenta &Website...",         ID_HELP_WEBSITE
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+IDR_MENU_STATUS MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save...",                    ID_STAT_FILE_SAVE
+        MENUITEM "&Log All Incoming Packets...", ID_STAT_FILE_LOG
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_STAT_FILE_CLOSE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Large Icons",                ID_STAT_VIEW_ICON
+        MENUITEM "&Report",                     ID_STAT_VIEW_REPORT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDD_MAGENTA_DIALOG      ICON    DISCARDABLE     "res\\idr_mage.ico"
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Cyan.ico"
+IDI_NORMAL              ICON    DISCARDABLE     "res\\Normal.ico"
+IDI_CYAN                ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_GUEST               ICON    DISCARDABLE     "res\\Guest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP  MOVEABLE PURE   "res\\setup.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR_MAGENTA ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "0",            ID_OPACITY_100,         VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_OPACITY_10,          VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_OPACITY_20,          VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_OPACITY_30,          VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_OPACITY_40,          VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_OPACITY_50,          VIRTKEY, CONTROL, NOINVERT
+    "6",            ID_OPACITY_60,          VIRTKEY, CONTROL, NOINVERT
+    "7",            ID_OPACITY_70,          VIRTKEY, CONTROL, NOINVERT
+    "8",            ID_OPACITY_80,          VIRTKEY, CONTROL, NOINVERT
+    "9",            ID_OPACITY_90,          VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_BLOCK_LIST,          VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_CHAT_CONNECT,        VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "D",            ID_CHAT_DISCONNECT,     VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "E",            ID_CLEAR_LOG,           VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "F",            ID_TOOLS_FONT,          VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_CHAT_SHOW_IGNORED,   VIRTKEY, CONTROL, NOINVERT
+    "I",            IDC_IGNORE,             VIRTKEY, ALT, NOINVERT
+    "L",            ID_LOGGING,             VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_CHAT_CLEAR_CHAT_WINDOW, VIRTKEY, SHIFT, ALT, NOINVERT
+    "P",            ID_TOOLS_OPTIONS,       VIRTKEY, CONTROL, NOINVERT
+    "P",            IDC_PRIVATE_CHAT,       VIRTKEY, ALT, NOINVERT
+    "R",            ID_TOOLS_SEND_RAW_COMMAND, VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_SAVE_FULL_LOG,       VIRTKEY, CONTROL, NOINVERT
+    "S",            IDC_SEND_PRIVATE,       VIRTKEY, ALT, NOINVERT
+    "S",            ID_CHAT_SAVE_LOG,       VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "T",            IDC_CHAT,               VIRTKEY, ALT, NOINVERT
+    VK_F1,          ID_HELP_TOPICS,         VIRTKEY, NOINVERT
+    "W",            ID_CHAT_SWITCH_NAME,    VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Magenta..."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    CG_IDS_PHYSICAL_MEM     "%lu KB"
+    CG_IDS_DISK_SPACE       "%lu KB Free on %c:"
+    CG_IDS_DISK_SPACE_UNAVAIL "Unavailable"
+    IDS_READY               "Ready."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_ABOUT           "About Magenta"
+    ID_CHAT_CONNECT         "Connect to the chat server"
+    ID_CHAT_DISCONNECT      "Disconnect from the chat server"
+    ID_CHAT_SHOW_IGNORED    "Show all ignored users"
+    ID_CHAT_SAVE_LOG        "Save a quick snapshot of the current chat session in RTF or text"
+    ID_CHAT_CLEAR_CHAT_WINDOW "Clear the chat window"
+    ID_CHAT_EXIT            "Exit Magenta"
+    ID_TOOLS_OPTIONS        "Change configuration options for Magenta"
+    ID_TOOLS_FONT           "Change the font face and size of the chat panel"
+    ID_TOOLS_STATUS_WINDOW  "Brings up the chat Status Window"
+    ID_TOOLS_CONSOLE        "Brings up the Chat Console"
+    ID_TOOLS_SEND_RAW_COMMAND "Allows you to send an unchecked server command"
+    IDS_TIME_FORMAT         "%b %d, %Y %H:%M:%S"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_STAT_FILE_SAVE       "Save the current list to a file"
+    ID_STAT_FILE_LOG        "Log all incoming packets to a text file"
+    ID_STAT_FILE_CLOSE      "Closes the status window"
+    ID_STAT_VIEW_ICON       "View large icons"
+    ID_STAT_VIEW_REPORT     "Report view"
+    ID_BLOCK_LIST           "Edit your list of blocked names"
+    ID_OPACITY_100          "Set 100% opacity."
+    ID_OPACITY_90           "Set 90% opacity."
+    ID_OPACITY_80           "Set 80% opacity."
+    ID_OPACITY_70           "Set 70% opacity."
+    ID_OPACITY_60           "Set 60% opacity."
+    ID_OPACITY_50           "Set 50% opacity."
+    ID_OPACITY_40           "Set 40% opacity."
+    ID_OPACITY_30           "Set 30% opacity."
+    ID_OPACITY_20           "Set 20% opacity."
+    ID_OPACITY_10           "Set 10% opacity."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_CHAT                "Once you enter your name, click to start chatting.  If chatting, clicking this will exit the chat session."
+    IDC_IGNORE              "Select a user in a list box, then click this to ignore them."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_PRIVATE_CHAT        "Select a name from one of the list boxes, then click this to begin a private chat session."
+    IDC_SEND_PRIVATE        "Type a message in the message text box, select a user from a list box, then click this to send private message."
+    IDC_SEND                "Type a message in the message text box, then click this to send it."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SAVE_FULL_LOG        "Saves a memory-based log in text, HTML, or XML formats"
+    ID_LOGGING              "Start / end memory-based logging"
+    ID_CLEAR_LOG            "Clears out a memory-based log"
+    ID_HELP_WEBSITE         "Go to the Magenta website"
+    ID_HELP_TOPICS          "Show help topics"
+    ID_URL_GRABBER          "Shows the URL Grabber dialog"
+    ID_TOOLS_SEARCH         "Searches a snapshot of the current session for text"
+    ID_SWITCH_NAME          "Allows you to change your name while chatting\nSwitch Name"
+    ID_CHAT_SWITCH_NAME     "Switch name when in the chat"
+    ID_TOOLS_ON_TOP         "Sets the Magenta to always be on top"
+    ID_FILE_ANNOTATE        "Sets the annotation appended to filenames saved automatically by Magenta"
+    ID_TOOLS_ANNOTATE       "Sets the annotation used on hourly log files"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Magenta.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

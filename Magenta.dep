@@ -1,0 +1,22 @@
+# Microsoft Developer Studio Generated Dependency File, included by Magenta.mak
+
+.\ChatWindow.cpp : \
+	".\ChatWindow.h"\
+	".\Magenta.h"\
+	".\StdAfx.h"\
+	
+
+.\Magenta.cpp : \
+	".\ChatWindow.h"\
+	".\Magenta.h"\
+	".\StdAfx.h"\
+	
+
+.\Magenta.rc : \
+	".\res\Magenta.ico"\
+	".\res\Magenta.rc2"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	

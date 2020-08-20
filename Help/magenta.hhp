@@ -1,0 +1,44 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=magenta.chm
+Contents file=magenta.hhc
+Default Window=Magenta
+Default topic=start.htm
+Display compile progress=Yes
+Full-text search=Yes
+Index file=magenta.hhk
+Language=0x409 English (United States)
+Title=Magenta Help
+
+[WINDOWS]
+Magenta="Magenta Help","magenta.hhc",,"start.htm",,,,,,0x3520,,0x302e,,0x30000,,,,,,0
+
+
+[FILES]
+block_list.htm
+chat_console.htm
+chatting.htm
+copyright.htm
+getting_started.htm
+private_chat.htm
+public_chat.htm
+raw_command.htm
+start.htm
+status_window.htm
+ignoring.htm
+options.htm
+login_options.htm
+crash_reporting.htm
+ignore_options.htm
+misc_options.htm
+viewing_options.htm
+logging.htm
+snapshot_log.htm
+memory_logs.htm
+xml_format.htm
+url_grabber.htm
+search_snap.htm
+
+[INFOTYPES]
+
